@@ -1,0 +1,64 @@
+{
+  "name": "liquid-glass-web-react",
+  "version": "0.1.1",
+  "description": "Apple-style liquid glass refraction for React. Cross-browser (Chrome, Safari, Firefox) — real SVG displacement over live DOM, no backdrop-filter hacks.",
+  "keywords": [
+    "react",
+    "liquid-glass",
+    "glass",
+    "glassmorphism",
+    "refraction",
+    "lens",
+    "displacement-map",
+    "svg-filter",
+    "ui"
+  ],
+  "license": "MIT",
+  "author": "Pallav Agarwal",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PallavAg/liquid-glass-web-react.git"
+  },
+  "homepage": "https://github.com/PallavAg/liquid-glass-web-react#readme",
+  "bugs": {
+    "url": "https://github.com/PallavAg/liquid-glass-web-react/issues"
+  },
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "build:demo": "vite build demo --base=/liquid-glass/",
+    "dev": "vite demo",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run typecheck && npm run test && npm run build"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "@vitejs/plugin-react": "^4.5.2",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "tsup": "^8.5.0",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5",
+    "vitest": "^3.2.3"
+  }
+}
